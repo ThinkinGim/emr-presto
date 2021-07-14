@@ -7,14 +7,14 @@ from aws_cdk import (
 )
 
 from scenarios import (
-    SampleScenarioStack,
+    EmrPrestoStack,
 )
 
 class DeployStage(core.Stage):
     def __init__(self, scope: core.Construct, id: str, **kwargs):
         super().__init__(scope, id, **kwargs)
 
-        SampleScenarioStack(self, 'Sample')
+        EmrPrestoStack(self, 'EmrPresto')
 
 
 class CdkPipelineStack(core.Stack):
